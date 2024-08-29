@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+    <link rel="stylesheet" href="../../src/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="logo">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </div>
+
+            <div class="menu"> 
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="../../src/static/images/barra/menu (1).png" alt="Inicio" class="menu-icon"></a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                        <li><a href="#">Mayoristas</a></li>
+                        <li><a href="#login" class="btn__quote">Acceso</a></li>
+                        <li><a href="registro.html" class="btn__quote">Registro</a></li>
+                        <li><a href="#"><img src="../../src/static/images/barra/carrito-de-compras (1).png" alt="Agregar al carrito" class="menu-icon"></a></li>
+                        
+                    </ul>
+                </nav>
+
+                
+
+                <div class="socialMedia">
+                    <a href="#">
+                        <img src="../../src/static/images/redes/instagram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="../../src/static/images/redes/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/social media/twitter.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/social media/youtube.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br><br><br>
+    <div class="container__cover div__offset">
+        <section id="login">
+            <div class="container__form">
+                <h2>Acceso</h2>
+                <form action="/login" method="POST">
+                    <label for="login-email">Correo Electrónico:</label>
+                    <input type="email" id="login-email" name="email" required>
+        
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required>
+        
+                    <button type="submit" class="btn__submit">Iniciar Sesión</button>
+                </form>
+
+                <p class="register-link">¿No tienes cuenta? <a href="registro.html">¡Regístrate aquí!</a></p>
+            </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

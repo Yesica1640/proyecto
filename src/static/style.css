@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color_text-primary: #FFB6C1;
+    --color_text-secundary: #101E2C;
+    --color_text-tertiary: #485663;
+    --main_color-primary: #9A00BF;
+    --main_color-secundary: #F4D4FB;
+    --background-color: #FAFBFE;
+    --lowText_font_size: 16px;
+    --text_size_title: 40px;
+    --text_title_card: 24px;
+    --text_title_cardv2: 20px;
+    --text_paragraph: 16px;
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2);
+}
+
+/* Estilo del header */
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--background-color); /* Agrega un color de fondo si es necesario */
+    border-bottom: 1px solid #ddd; /* Agrega una línea de separación opcional */
+}
+
+/* Contenedor del header */
+.container__header {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Estilo del logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Estilo del menú */
+.menu {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Permite que el menú ocupe el espacio restante */
+    justify-content: center; /* Centra el menú horizontalmente */
+}
+
+/* Estilo de la lista del menú */
+.menu nav ul {
+    display: flex;
+    align-items: center; /* Alinea los ítems verticalmente */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilo de cada ítem del menú */
+.menu nav ul li {
+    margin: 0 16px; /* Espaciado entre ítems del menú */
+}
+
+/* Estilo de los enlaces del menú */
+.menu nav ul li a {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono con el texto */
+    color: var(--color_text-secundary);
+    font-size: var(--lowText_font_size);
+    text-decoration: none;
+}
+
+.menu-icon {
+    width: 30px; /* Tamaño consistente para todos los íconos */
+    height: 30px; /* Asegura que todos los íconos tengan la misma altura */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle; /* Alinea verticalmente el ícono con el texto */
+}
+
+/* Hover de los enlaces del menú */
+.menu nav ul li a:hover {
+    color: var(--color_text-primary);
+}
+
+/* Estilo de los botones */
+.btn__quote {
+    display: block;
+    padding: 8px 40px;
+    border: 2px solid var(--main_color-primary);
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: all 300ms;
+}
+
+.btn__quote:hover {
+    color: white;
+    background: var(--main_color-primary);
+}
+
+/* Estilo de los íconos de redes sociales */
+.menu .socialMedia {
+    display: flex;
+    align-items: center;
+}
+
+.menu .socialMedia a {
+    margin: 0 3px; /* Espacio entre los íconos de redes sociales */
+}
+
+.menu .socialMedia img {
+    width: 30px; /* Ajusta el tamaño de los íconos de redes sociales */
+    height: auto; /* Mantiene la proporción del ícono */
+}
+
+
+/*portada de inicio*/
+
+.container__cover{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background:#FAF0E6;
+}
+
+.cover{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    padding: 0px 20px;
+}
+
+.image__cover {
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+.image__cover img {
+    width: 500px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+
+
+
+/* Barra de Productos */
+.container__products {
+    padding: 2rem 20px;
+    background-color: var(--background-color);
+}
+
+.container__products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: var(--text_title_card);
+    color: var(--color_text-secundary);
+}
+
+.products__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    box-shadow: var(--box_shadow-primary);
+    transition: all 300ms;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.product h3 {
+    font-size: var(--text_title_cardv2);
+    margin: 0.5rem 0;
+    color: var(--color_text-secundary);
+}
+
+.product p {
+    font-size: var(--text_paragraph);
+    color: var(--color_text-tertiary);
+}
+
+.btn__product {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    background-color: var(--main_color-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 300ms;
+}
+
+.btn__product:hover {
+    background-color: #FFB6C1;
+    color: white;
+    border: 2px solid var(--main_color-primary);
+}
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 6% auto; /* Ajusta el margen superior e inferior */
+    padding: 50px; /* Espacio interno alrededor del contenido del modal */
+    border: 1px solid #888;
+    width: 90%; /* Ancho del modal */
+    max-width: 1100px; /* Ancho máximo del modal */
+    position: relative;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    /* Asegúrate de que el contenedor modal esté centrado */
+    text-align: center; /* Opcional: centra el texto dentro del modal */
+
+}
+
+/* Estilo del botón de cerrar */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo del título en el modal */
+.modal-title {
+    font-size: 1.5em; /* Tamaño de la fuente del título */
+    font-weight: bold; /* Peso de la fuente */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Opcional: centra el título */
+}
+
+/* Estilo del contenedor de las imágenes en el modal */
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 25px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: start; /* Alinea los elementos al inicio (superior) */
+    margin: 0 auto; /* Asegura que el contenedor de imágenes esté centrado */
+    max-width: 80%; /* Asegura que el contenedor no se expanda más allá del modal */
+}
+
+/* Estilo para cada contenedor de producto */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    box-sizing: border-box;
+    background-color:#FFF0F5; /* Color de fondo blanco */
+}
+
+/* Estilo para las imágenes dentro del contenedor del producto */
+.product-image {
+    width: 160px; /* Ajusta el tamaño de las imágenes */
+    height: 160px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsionar */
+    border-radius: 8px;
+}
+
+/* Estilo para el precio del producto */
+.product-container p {
+    font-size: 1em;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Estilo para la cantidad disponible */
+.product-container .qty-available {
+    font-size: 0.9em;
+    color:#FF69B4;
+    margin: 10px 0;
+}
+
+/* Estilos para el contenedor de cantidad */
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Estilo para el campo de entrada de cantidad */
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+}
+
+/* Estilo para el botón de agregar al carrito en el modal */
+.btn__add-to-cart {
+    display: inline-block;
+    padding: 12px 18px; /* Tamaño del botón */
+    border: 2px solid var(--main_color-primary); /* Borde del botón */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: var(--main_color-primary); /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    font-size: 12px; /* Tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    text-transform: lowercase; /* Texto en minuscula */
+    text-align: center; /* Alineación del texto */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+/* Hover y focus del botón */
+.btn__add-to-cart:hover,
+.btn__add-to-cart:focus {
+    background-color: #FFB6C1; /* Color de fondo al pasar el ratón o enfocar */
+    color: var(--main_color-primary); /* Color del texto al pasar el ratón o enfocar */
+    border-color: #FFB6C1; /* Color del borde al pasar el ratón o enfocar */
+    outline: none; /* Elimina el borde por defecto del enfoque */
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón o enfocar */
+}
+
+/* Efecto activo del botón (cuando se presiona) */
+.btn__add-to-cart:active {
+    background-color: #FF9C9C; /* Color de fondo al presionar el botón */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reducida al presionar */
+    transform: scale(0.98); /* Efecto de reducción al presionar */
+}
+
+/* Estilos para el carrito */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(161, 42, 42, 0.2);
+    z-index: 1000;
+}
+
+.cart-content {
+    position: relative;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Contenedor del Formulario */
+.container__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #DDA0DD;
+    border-radius: 8px;
+    box-shadow: var(--box_shadow-primary);
+}
+
+.container__form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color_text-secundary);
+}
+
+.container__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container__form label {
+    font-size: var(--text_paragraph);
+    color: var(--color_text-tertiary);
+}
+
+.container__form input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn__submit {
+    padding: 0.8rem;
+    background: var(--main_color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: var(--lowText_font_size);
+    cursor: pointer;
+    transition: background 300ms;
+}
+
+.btn__submit:hover {
+    background: #FFB6C1;
+}
+
+/* Contenedor del mensaje de registro */
+.register-container {
+    margin-top: 1.5rem; /* Espacio arriba del contenedor */
+    text-align: center; /* Centra el texto */
+}
+
+.register-container p {
+    font-size: var(--text_paragraph); /* Tamaño de fuente del texto */
+    color: var(--color_text-tertiary); /* Color del texto */
+    
+    margin-bottom: 0.5rem; /* Espacio debajo del texto */
+}
+
+
+
+.register-container a {
+    color: var(--main_color-primary); /* Color del enlace */
+    text-decoration: none; /* Sin subrayado en el enlace */
+    font-weight: bold; /* Texto en negrita para el enlace */
+}
+
+.register-container a:hover {
+    text-decoration: underline; /* Subrayado en el enlace al pasar el ratón */
+}
+
+/* Sección de Medios de Pago */
+#payment-methods {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+#payment-methods h2 {
+    font-size: 24px;
+    color: var(--color_text-secundary);
+    margin-bottom: 20px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.payment-icons a {
+    display: inline-block;
+}
+
+.payment-icons img {
+    width: 60px; /* Tamaño de los íconos de pago */
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.payment-icons img:hover {
+    opacity: 0.7; /* Efecto de hover para los íconos */
+}
+
+/* Sección de Contacto */
+#contact {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 24px;
+    color: var(--color_text-secundary);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: var(--color_text-tertiary);
+    margin-bottom: 20px;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9932CC; /* Color verde de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link img {
+    width: 24px; /* Tamaño del ícono de WhatsApp */
+    height: auto;
+    margin-right: 10px;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E; /* Color más oscuro de WhatsApp en hover */
+}
+
+
+/* Sección de Ubicación */
+#location {
+    padding: 20px;
+    background-color: #F0F8FF;
+    text-align: center;
+}
+
+#location h2 {
+    font-size: 24px;
+    color: var(--color_text-secundary);
+    margin-bottom: 20px;
+}
+
+#location p {
+    font-size: 16px;
+    color: var(--color_text-tertiary);
+    margin-bottom: 20px;
+}
+
+.location-info address {
+    font-size: 16px;
+    color: var(--color_text-tertiary);
+    margin-bottom: 20px;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 450px;
+    max-width: 400px; /* Ajustar el tamaño del mapa en pantallas grandes */
+    border-radius: 8px;
+}
+
+/* Estilos para la sección exclusiva para mayoristas */
+.wholesale-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.wholesale-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.wholesale-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.wholesale-card img {
+    width: 20%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.wholesale-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.wholesale-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.wholesale-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    gap: 10px; /* Espacio entre la imagen y el texto (ajusta según sea necesario) */
+}
+
+.centered-container img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
